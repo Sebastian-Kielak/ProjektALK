@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ShopTestCases" verbose="1">
+    <test name="ShopTest1" preserve-order="true" enabled="true">
+        <classes>
+            <class name="RegisterTest"></class>
+        </classes>
+    </test>
+    <test name="ShopTest2" preserve-order="true" enabled="true">
+        <classes>
+            <class name="LoginTest"></class>
+        </classes>
+    </test>
+</suite>

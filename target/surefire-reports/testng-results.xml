@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-22T16:46:20 CEST" name="ShopTestCases" finished-at="2022-05-22T16:46:58 CEST" duration-ms="37279">
+    <groups>
+    </groups>
+    <test started-at="2022-05-22T16:46:20 CEST" name="ShopTest1" finished-at="2022-05-22T16:46:47 CEST" duration-ms="26285">
+      <class name="RegisterTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:RegisterTest@2e4b8173]" started-at="2022-05-22T16:46:20 CEST" name="setUp" finished-at="2022-05-22T16:46:26 CEST" duration-ms="5410" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="RegisterTest()[pri:0, instance:RegisterTest@2e4b8173]" started-at="2022-05-22T16:46:26 CEST" name="RegisterTest" finished-at="2022-05-22T16:46:46 CEST" duration-ms="20431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:RegisterTest@2e4b8173]" started-at="2022-05-22T16:46:46 CEST" name="tearDown" finished-at="2022-05-22T16:46:47 CEST" duration-ms="289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- RegisterTest -->
+    </test> <!-- ShopTest1 -->
+    <test started-at="2022-05-22T16:46:47 CEST" name="ShopTest2" finished-at="2022-05-22T16:46:58 CEST" duration-ms="10950">
+      <class name="LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:LoginTest@3c407114]" started-at="2022-05-22T16:46:47 CEST" name="setUp" finished-at="2022-05-22T16:46:50 CEST" duration-ms="2805" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="LoginTest()[pri:0, instance:LoginTest@3c407114]" started-at="2022-05-22T16:46:50 CEST" name="LoginTest" description="Test sprawdzający poprawne logowanie" finished-at="2022-05-22T16:46:57 CEST" duration-ms="7916" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:LoginTest@3c407114]" started-at="2022-05-22T16:46:57 CEST" name="tearDown" finished-at="2022-05-22T16:46:58 CEST" duration-ms="227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- LoginTest -->
+    </test> <!-- ShopTest2 -->
+  </suite> <!-- ShopTestCases -->
+</testng-results>
