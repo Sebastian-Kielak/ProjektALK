@@ -2,6 +2,9 @@ package shop.pages.pop;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -12,34 +15,40 @@ import java.util.concurrent.TimeUnit;
 public class SignInPage {
     private WebDriver driver;
     // lokalziatory elementów do rejestracji
-    private By inputEmail = By.id("email_create");
-    private By buttonCreateAccnt = By.id("SubmitCreate");
+    @FindBy (id = "email_create")
+    private WebElement inputEmail;
+    @FindBy (id = "SubmitCreate")
+    private WebElement buttonCreateAccnt;
     // lokalizatory elementów do logowania
-    private By inputLoginEmail = By.id("email");
-    private By inputLoginPassword = By.id("passwd");
-    private By buttonSignIn = By.id("SubmitLogin");
+    @FindBy (id = "email")
+    private WebElement inputLoginEmail;
+    @FindBy (id = "passwd")
+    private WebElement inputLoginPassword;
+    @FindBy (id = "SubmitLogin")
+    private WebElement buttonSignIn;
 
 
     public SignInPage(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(this.driver, this);
     }
 
     public void fillToRegister(HashMap<String, String> data){
-        driver.findElement(inputEmail).sendKeys(data.get("email"));
+        this.inputEmail.sendKeys(data.get("email"));
     }
 
     public RegisterPage clickRegisterButton(){
-        driver.findElement(buttonCreateAccnt).click();
+        this.buttonCreateAccnt.click();
         return new RegisterPage(driver);
     }
 
     public void fillToLogin(String login, String password){
-        driver.findElement(inputLoginEmail).sendKeys(login);
-        driver.findElement(inputLoginPassword).sendKeys(password);
+        this.inputLoginEmail.sendKeys(login);
+        this.inputLoginPassword.sendKeys(password);
     }
 
     public MainLoggedUserPage clickSignInButton(){
-        driver.findElement(buttonSignIn).click();
+        this.buttonSignIn.click();
         return new MainLoggedUserPage(driver);
     }
 }

@@ -2,16 +2,21 @@ package shop.pages.pop;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 
 public class MainPage {
     private WebDriver driver;
-    private By signInButton = By.className("login");
+    @FindBy (className = "login")
+    private WebElement signInButton;
 
     public MainPage(WebDriver driver)
     {
         this.driver = driver;
+        PageFactory.initElements(this.driver, this);
     }
 
     public MainPage openPage()
@@ -22,7 +27,7 @@ public class MainPage {
 
     public SignInPage clickSignIn()
     {
-        driver.findElement(signInButton).click();
+        this.signInButton.click();
         return new SignInPage(driver);
     }
 }
