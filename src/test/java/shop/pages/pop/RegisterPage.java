@@ -18,6 +18,9 @@ import java.time.Duration;
 
 public class RegisterPage {
     private WebDriver driver;
+    // lokalizatory do asercji -> ValidationRegisterFormTest
+    @FindBy (className = "alert")
+    public WebElement alert;
     // lokalziatory dla danych klienta
     @FindBy (id = "id_gender1")
     private WebElement male;
@@ -35,6 +38,8 @@ public class RegisterPage {
     private WebElement monthOfBirth;
     @FindBy (id = "years")
     private WebElement yearOfBirth;
+    @FindBy (id = "email")
+    private WebElement email;
     // lokalizatory dla danych adresowych
     @FindBy (id = "firstname")
     private WebElement firstNameAddress;
@@ -103,8 +108,20 @@ public class RegisterPage {
         }
     }
 
+    public void clearEmailInput(){
+    this.email.clear();
+    }
+
     public MainLoggedUserPage clickRegisterButton(){
         this.buttonRegister.click();
         return new MainLoggedUserPage(driver);
+    }
+
+    public String getAlertText(){
+       return this.alert.getText();
+    }
+
+    public WebElement alertElement(){
+        return this.alert;
     }
 }

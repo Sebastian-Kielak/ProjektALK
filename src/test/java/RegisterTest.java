@@ -33,7 +33,7 @@ public class RegisterTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
-    @Test
+    @Test(description = "Test sprawdzający prawidłowy proces rejestracji")
     public void RegisterTest() {
         //generowanie danych do rejestracji -> HashMap data
         Faker faker = new Faker(Locale.US);

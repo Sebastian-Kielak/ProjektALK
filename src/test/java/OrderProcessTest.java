@@ -1,4 +1,3 @@
-import com.github.javafaker.Faker;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -12,14 +11,11 @@ import shop.pages.pop.MainLoggedUserPage;
 import shop.pages.pop.MainPage;
 import shop.pages.pop.SignInPage;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.Locale;
 
-public class LoginTest {
+public class OrderProcessTest{
 
     public WebDriver driver;
     public MainPage mainPage;
@@ -35,8 +31,8 @@ public class LoginTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @Test (description = "Test sprawdzający poprawne logowanie")
-    public void loginTest() throws IOException, CsvValidationException {
+    @Test(description = "Test sprawdzający pełny proces sprzedaży")
+    public void orderProcessTest() throws IOException, CsvValidationException {
         // wczytywanie z pliku .csv danych do logowania, wartości do warunku asercji
         CSVReader csv = new CSVReader(new FileReader("./data/RegisteredAccount.csv"));
         String[] line;
@@ -50,11 +46,14 @@ public class LoginTest {
         signInPage.fillToLogin(loginEmail, password);
         mainLoggedUserPage = signInPage.clickSignInButton();
         Assert.assertEquals(mainLoggedUserPage.getLoginUser(), userName);
+
+
+
     }
 
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
-       driver.quit();
+        driver.quit();
     }
 }
