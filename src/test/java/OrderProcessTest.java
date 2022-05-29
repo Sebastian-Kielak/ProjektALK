@@ -46,9 +46,6 @@ public class OrderProcessTest{
         signInPage.fillToLogin(loginEmail, password);
         mainLoggedUserPage = signInPage.clickSignInButton();
         Assert.assertEquals(mainLoggedUserPage.getLoginUser(), userName);
-
-
-
     }
 
 

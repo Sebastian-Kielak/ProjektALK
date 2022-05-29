@@ -58,7 +58,7 @@ public class RegisterTest {
         signInPage = mainPage.clickSignIn();
         signInPage.fillToRegister(registerData);
         registerPage = signInPage.clickRegisterButton();
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.id("id_gender1")));
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfElementLocated(By.id("id_gender1")));
         registerPage.fillRegisterForm(registerData);
         mainLoggedUserPage = registerPage.clickRegisterButton();
         Assert.assertEquals(mainLoggedUserPage.getLoginUser(),registerData.get("custName") + " " + registerData.get("custLastName"));

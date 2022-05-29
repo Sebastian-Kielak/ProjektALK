@@ -11,10 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import shop.pages.pop.MainLoggedUserPage;
-import shop.pages.pop.MainPage;
-import shop.pages.pop.RegisterPage;
-import shop.pages.pop.SignInPage;
+import shop.pages.pop.*;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -31,6 +28,7 @@ public class ValidationRegisterFormTest {
     public SignInPage signInPage;
     public RegisterPage registerPage;
     public MainLoggedUserPage mainLoggedUserPage;
+    public ContactUsPage contactUsPage;
     public HashMap<String, String> registerEmail = new HashMap<>();
 
 
@@ -47,7 +45,6 @@ public class ValidationRegisterFormTest {
 // kroki testu
         Faker faker = new Faker(Locale.US);
         registerEmail.put("email", faker.internet().emailAddress());
-
         mainPage = new MainPage(driver).openPage();
         signInPage = mainPage.clickSignIn();
         signInPage.fillToRegister(registerEmail);
@@ -57,10 +54,19 @@ public class ValidationRegisterFormTest {
         mainLoggedUserPage = registerPage.clickRegisterButton();
         Assert.assertTrue(registerPage.getAlertText().contains("9 errors"));
     }
-
+    @Test(description = "Test wysyłający prawidłowy formularz konstaktowy")
+    public void sendCorrectContactUsForm(){
+        mainPage = new MainPage(driver).openPage();
+        mainPage.takeMainPageScreenshot("./images/MainPageScreenshot.png");
+        contactUsPage = mainPage.clickContactUs();
+        String pathToFile = System.getProperty("user.dir") + "/images/MainPageScreenshot.png";
+        contactUsPage.fillContactForm("1", "abcdefg@wp.pl", "ORD_ER_12321", pathToFile, "Lorem impsum test message.");
+        contactUsPage.clickSendButton();
+        Assert.assertTrue(contactUsPage.getAlertText().contains("successfully sent"));
+    }
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
-
+       driver.quit();
     }
 }
