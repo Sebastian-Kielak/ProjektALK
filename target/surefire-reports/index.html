@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-ShopTestCases" class="navigator-link">
-              <span class="suite-name border-failed">ShopTestCases</span>
+              <span class="suite-name border-passed">ShopTestCases</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -56,7 +56,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-ShopTestCases" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,35 +93,41 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,  1 skipped,  </span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-ShopTestCases" class="hide-methods failed suite-ShopTestCases"> (hide)</a> <!-- hide-methods failed suite-ShopTestCases -->
-                      <a href="#" panel-name="suite-ShopTestCases" class="show-methods failed suite-ShopTestCases"> (show)</a> <!-- show-methods failed suite-ShopTestCases -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-ShopTestCases" class="hide-methods passed suite-ShopTestCases"> (hide)</a> <!-- hide-methods passed suite-ShopTestCases -->
+                      <a href="#" panel-name="suite-ShopTestCases" class="show-methods passed suite-ShopTestCases"> (show)</a> <!-- show-methods passed suite-ShopTestCases -->
                     </span>
-                    <div class="method-list-content failed suite-ShopTestCases">
+                    <div class="method-list-content passed suite-ShopTestCases">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ShopTestCases" title="LoginTest" class="method navigator-link" hash-for-method="LoginTest">LoginTest</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ShopTestCases" title="ValidationRegisterFormTest" class="method navigator-link" hash-for-method="RegisterTest">RegisterTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-ShopTestCases -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-ShopTestCases" class="hide-methods skipped suite-ShopTestCases"> (hide)</a> <!-- hide-methods skipped suite-ShopTestCases -->
-                      <a href="#" panel-name="suite-ShopTestCases" class="show-methods skipped suite-ShopTestCases"> (show)</a> <!-- show-methods skipped suite-ShopTestCases -->
-                    </span>
-                    <div class="method-list-content skipped suite-ShopTestCases">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-ShopTestCases" title="RegisterTest" class="method navigator-link" hash-for-method="RegisterTest">RegisterTest</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ShopTestCases" title="ValidationRegisterFormTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-ShopTestCases -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ShopTestCases" title="ValidationRegisterFormTest" class="method navigator-link" hash-for-method="orderProcessTest">orderProcessTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ShopTestCases" title="ValidationRegisterFormTest" class="method navigator-link" hash-for-method="sendCorrectContactUsForm">sendCorrectContactUsForm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ShopTestCases" title="ValidationRegisterFormTest" class="method navigator-link" hash-for-method="validationRegisterFormTest">validationRegisterFormTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-ShopTestCases -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -133,54 +139,10 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-ShopTestCases" class="panel ShopTestCases">
-          <div class="suite-ShopTestCases-class-failed">
+          <div class="suite-ShopTestCases-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="LoginTest">
-                  </a> <!-- LoginTest -->
-                  <span class="method-name">LoginTest</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=97.0.4692.99)
-Build info: version: &apos;4.1.3&apos;, revision: &apos;7b1ebf28ef&apos;
-System info: host: &apos;tester-VirtualBox&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-39-generic&apos;, java.version: &apos;13.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4da4be4c0d51790492eb38399c942a2b, findElement {using=class name, value=login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: /tmp/.com.google.Chrome.ewEaih}, goog:chromeOptions: {debuggerAddress: localhost:37227}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:37227/devtoo..., se:cdpVersion: 97.0.4692.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4da4be4c0d51790492eb38399c942a2b
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy13.click(Unknown Source)
-	at shop.pages.pop.MainPage.clickSignIn(MainPage.java:30)
-	at LoginTest.LoginTest(LoginTest.java:49)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1508)
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Test sprawdzający poprawne logowanie)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ShopTestCases-class-failed -->
-          <div class="suite-ShopTestCases-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">RegisterTest</span>
+              <img src="passed.png"/>
+              <span class="class-name">ValidationRegisterFormTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -188,32 +150,48 @@ Session ID: 4da4be4c0d51790492eb38399c942a2b
                   <a name="RegisterTest">
                   </a> <!-- RegisterTest -->
                   <span class="method-name">RegisterTest</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: DevToolsActivePort file doesn&apos;t exist
-Build info: version: &apos;4.1.3&apos;, revision: &apos;7b1ebf28ef&apos;
-System info: host: &apos;tester-VirtualBox&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.13.0-39-generic&apos;, java.version: &apos;13.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:248)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:164)
-	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:106)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:93)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:48)
-	at RegisterTest.setUp(RegisterTest.java:28)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1508)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
+                  <em>
+(Test sprawdzający prawidłowy proces rejestracji)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest">
+                  </a> <!-- loginTest -->
+                  <span class="method-name">loginTest</span>
+                  <em>
+(Test sprawdzajacy poprawne logowanie)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="orderProcessTest">
+                  </a> <!-- orderProcessTest -->
+                  <span class="method-name">orderProcessTest</span>
+                  <em>
+(Test przechodzący przez pełen proces sprzedaży)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sendCorrectContactUsForm">
+                  </a> <!-- sendCorrectContactUsForm -->
+                  <span class="method-name">sendCorrectContactUsForm</span>
+                  <em>
+(Test wysylajacy prawidlowy formularz konstaktowy)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validationRegisterFormTest">
+                  </a> <!-- validationRegisterFormTest -->
+                  <span class="method-name">validationRegisterFormTest</span>
+                  <em>
+(Test sprawdzajacy walidacje formularza rejestracji)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ShopTestCases-class-skipped -->
+          </div> <!-- suite-ShopTestCases-class-passed -->
         </div> <!-- panel ShopTestCases -->
         <div panel-name="test-xml-ShopTestCases" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -224,16 +202,11 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;ShopTestCases&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;ShopTest1&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;ShopTestScenario1&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;RegisterTest&quot;/&gt;
+      &lt;class name=&quot;ValidationRegisterFormTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ShopTest1 --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;ShopTest2&quot; verbose=&quot;0&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;LoginTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ShopTest2 --&gt;
+  &lt;/test&gt; &lt;!-- ShopTestScenario1 --&gt;
 &lt;/suite&gt; &lt;!-- ShopTestCases --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -245,10 +218,7 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">ShopTest1 (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">ShopTest2 (1 class)</span>
+                <span class="test-name">ShopTestScenario1 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -274,20 +244,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LoginTest')
-data.setCell(0, 2, 'LoginTest')
-data.setCell(0, 3, 146253);
+data.setCell(0, 1, 'orderProcessTest')
+data.setCell(0, 2, 'ValidationRegisterFormTest')
+data.setCell(0, 3, 36875);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'RegisterTest')
-data.setCell(1, 2, 'RegisterTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 2, 'ValidationRegisterFormTest')
+data.setCell(1, 3, 22502);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validationRegisterFormTest')
+data.setCell(2, 2, 'ValidationRegisterFormTest')
+data.setCell(2, 3, 19050);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'sendCorrectContactUsForm')
+data.setCell(3, 2, 'ValidationRegisterFormTest')
+data.setCell(3, 3, 15729);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'loginTest')
+data.setCell(4, 2, 'ValidationRegisterFormTest')
+data.setCell(4, 3, 12404);
 window.suiteTableData['ShopTestCases']= { tableData: data, tableDiv: 'times-div-ShopTestCases'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-ShopTestCases">
               </div> <!-- times-div-ShopTestCases -->
             </div> <!-- times-div -->
@@ -313,40 +295,67 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">RegisterTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
+              <div class="chronological-class-name">ValidationRegisterFormTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">RegisterTest</span>
-                <span class="method-start">70217 ms</span>
+                <span class="method-start">3909 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <img src="failed.png">
-                </img>
+              <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">70227 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
+                <span class="method-start">26439 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">70484 ms</span>
-              </div> <!-- configuration-class before -->
+                <span class="method-start">26732 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">LoginTest</span>
-                <span class="method-start">92569 ms</span>
+                <span class="method-name">loginTest</span>
+                <span class="method-start">29075 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
+              <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">238892 ms</span>
-              </div> <!-- configuration-class after -->
+                <span class="method-start">41495 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">41814 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">orderProcessTest</span>
+                <span class="method-start">44194 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">81071 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">81307 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">sendCorrectContactUsForm</span>
+                <span class="method-start">83732 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">99462 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">99700 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validationRegisterFormTest</span>
+                <span class="method-start">102168 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">121218 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

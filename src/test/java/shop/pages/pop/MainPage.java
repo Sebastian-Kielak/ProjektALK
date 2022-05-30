@@ -1,13 +1,11 @@
 package shop.pages.pop;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.Reporter;
 
 import java.io.File;
@@ -22,6 +20,10 @@ public class MainPage {
     private WebElement contactUsButton;
     @FindBy (tagName = "body")
     private WebElement bodyElement;
+    @FindBy (id = "search_query_top")
+    private WebElement searchConsole;
+    @FindBy (className = "button-search")
+    private WebElement searchButton;
 
     public MainPage(WebDriver driver)
     {
@@ -56,5 +58,14 @@ public class MainPage {
     {
         this.contactUsButton.click();
         return new ContactUsPage(driver);
+    }
+
+    public void searchProducts(String searchText){
+        this.searchConsole.sendKeys(searchText);
+    }
+
+    public SearchResultPage clickSearchButton(){
+        this.searchButton.click();
+        return new SearchResultPage(driver);
     }
 }

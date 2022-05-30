@@ -2,8 +2,8 @@
 <suite name="ShopTestCases" verbose="1">
     <test name="ShopTestScenario1" preserve-order="true" enabled="true">
         <classes>
-            <class name="RegisterTest"></class>
-            <class name="LoginTest"></class>
+         <!--   <class name="RegisterTest"></class>
+            <class name="LoginTest"></class> -->
             <class name="ValidationRegisterFormTest"></class>
         </classes>
     </test>

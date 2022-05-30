@@ -3,24 +3,17 @@ package shop.pages.pop;
 import java.util.HashMap;
 import java.util.Random;
 
-import org.bouncycastle.jcajce.provider.asymmetric.ec.KeyFactorySpi;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class RegisterPage {
     private WebDriver driver;
     // lokalizatory do asercji -> ValidationRegisterFormTest
     @FindBy (className = "alert")
-    public WebElement alert;
+    private WebElement alert;
     // lokalziatory dla danych klienta
     @FindBy (id = "id_gender1")
     private WebElement male;

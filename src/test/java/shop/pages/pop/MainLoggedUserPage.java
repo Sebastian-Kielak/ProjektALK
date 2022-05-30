@@ -1,6 +1,5 @@
 package shop.pages.pop;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +9,8 @@ public class MainLoggedUserPage {
     private WebDriver driver;
     @FindBy (className = "account")
     private WebElement userName;
-
+    @FindBy (xpath = "//*[contains(text(),'Cart')]")
+    private WebElement shoppingCartButton;
     public MainLoggedUserPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
@@ -18,5 +18,10 @@ public class MainLoggedUserPage {
 
     public String getLoginUser(){
         return this.userName.getText();
+    }
+
+    public ShoppingCartPage clickShoppingCartButton(){
+        this.shoppingCartButton.click();
+        return new ShoppingCartPage(driver);
     }
 }
