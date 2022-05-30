@@ -101,6 +101,10 @@ public class RegisterPage {
         }
     }
 
+    public WebElement genderElement(){
+        return this.male;
+    }
+
     public void clearEmailInput(){
     this.email.clear();
     }

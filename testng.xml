@@ -1,10 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="ShopTestCases" verbose="1">
-    <test name="ShopTestScenario1" preserve-order="true" enabled="true">
+<suite name="AutomaticShopTests" verbose="1">
+    <test name="ShopScenarios" preserve-order="true" enabled="true">
         <classes>
-         <!--   <class name="RegisterTest"></class>
-            <class name="LoginTest"></class> -->
-            <class name="ValidationRegisterFormTest"></class>
+            <class name="TestBasicScenario"></class>
         </classes>
     </test>
 </suite>
