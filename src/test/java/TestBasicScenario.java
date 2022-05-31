@@ -62,7 +62,7 @@ public class TestBasicScenario {
     }
 
     @Test(description = "TC2 - prawidłowe przejście przez proces rejestracji")
-    public void RegisterTest() {
+    public void registerTest() {
         //generowanie danych do rejestracji -> HashMap data
         Faker faker = new Faker(Locale.US);
         registerData.put("custName", faker.name().firstName());
