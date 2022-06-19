@@ -21,7 +21,7 @@
 
 
 ## Użyte technologie
-- Page of Patter
+- Page Object
 - Page Factory
 - Data Driven (czytanei z pliku .csv)
 
@@ -44,7 +44,7 @@
 1. Sprawdzenie wymagalności pól formularza rejestracji
 2. Prawidłowe przejście przez proces rejestracji
 3. Prawidłowe przejście przez proces logowania
-4. Prawidlowa wysyłka formularza konstaktowego
+4. Prawidlowa wysyłka formularza kontaktowego
 5. Prawidłowe przejście pełnego procesu sprzedaży
 
 
