@@ -43,7 +43,7 @@ public class TestBasicScenario {
     @BeforeMethod
     public void setUp() {
         ChromeOptions ChromeOptions = new ChromeOptions();
-        ChromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+        ChromeOptions.addArguments("--headless", "window-size=1920,1080", "--no-sandbox");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(ChromeOptions);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
