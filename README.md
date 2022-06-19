@@ -51,11 +51,11 @@
 ## Uruchomianie testów
 1. Skopiuj repozytorium z GitHub'a
 2. Otwórz terminal w folderze projektu
-3. Wpisz w konsoli "mvn clean test"
+3. Wpisz w konsoli `mvn clean test`
 
 
 ## Dodatkowe informacje
-Program odpala się w tle (--headless), w przypadku chęci obejrzenia wykonywania testów należy usunąć w pliku "TestBasicScenario.java", opcje "--headless"
+Program odpala się w trybie headless, w przypadku chęci obejrzenia wykonywania testów należy usunąć w pliku "TestBasicScenario.java", opcje `--headless`
 
 
 ## Status projektu
