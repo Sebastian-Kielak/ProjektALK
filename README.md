@@ -6,6 +6,7 @@
 * [Użyte technologie](#Użyte-technologie)
 * [Użyte biblioteki](#Użyte-biblioteki)
 * [Wymagania](#Wymagania)
+* [Przypadki_testowe](#Przypadki-testowe)
 * [Uruchamianie testów](#Uruchamianie-testów)
 * [Dodatkowe informacje](#Dodatkowe-informacje)
 * [Status projektu](#Status-projektu)
@@ -31,11 +32,20 @@
 - OpenCSV
 - Maven
 - TestNG
+- WebDriverManager
 
 
 ## Wymagania
 - Stabilna wersja przeglądarki Chrome
 - JAVA w wersji 11 (w przypadku innej wersji należy zmienić wersje w pliku pom.xml)
+
+
+## Przypadki testowe
+1. Sprawdzenie wymagalności pól formularza rejestracji
+2. Prawidłowe przejście przez proces rejestracji
+3. Prawidłowe przejście przez proces logowania
+4. Prawidlowa wysyłka formularza konstaktowego
+5. Prawidłowe przejście pełnego procesu sprzedaży
 
 
 ## Uruchomianie testów
